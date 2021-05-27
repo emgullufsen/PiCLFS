@@ -1047,4 +1047,7 @@ tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
 sysfs		/sys		sysfs	defaults	0	0
 EOF
 
+mkdir -v $ROOTFS_DIR/lib/firmware
+cp -rv ~/Downloads/RPI4FIRMWARE/lib/firmware/brcm/ $ROOTFS_DIR/lib/firmware
+
 success "\nTotal root file system build time: $(timer $total_build_time)\n"

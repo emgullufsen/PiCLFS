@@ -1,5 +1,5 @@
 ftp://sourceware.org/pub/elfutils/0.178/elfutils-0.178.tar.bz2
-http://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.24.orig.tar.gz
+http://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
 https://busybox.net/downloads/busybox-1.31.1.tar.bz2
 https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.45.4/e2fsprogs-1.45.4.tar.gz
 https://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.xz
@@ -8,10 +8,10 @@ https://ftp.gnu.org/gnu/binutils/binutils-2.33.1.tar.xz
 https://ftp.gnu.org/gnu/bison/bison-3.5.tar.xz
 https://ftp.gnu.org/gnu/gawk/gawk-5.0.1.tar.xz
 https://ftp.gnu.org/gnu/gcc/gcc-9.2.0/gcc-9.2.0.tar.xz
-https://ftp.gnu.org/gnu/glibc/glibc-2.30.tar.xz
+https://ftp.gnu.org/gnu/glibc/glibc-2.32.tar.xz
 https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz
 https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz
-https://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz
+https://ftp.gnu.org/gnu/m4/m4-1.4.9.tar.gz
 https://ftp.gnu.org/gnu/mpc/mpc-1.1.0.tar.gz
 https://ftp.gnu.org/gnu/mpfr/mpfr-4.0.2.tar.xz
 https://ftp.gnu.org/gnu/mtools/mtools-4.0.23.tar.bz2

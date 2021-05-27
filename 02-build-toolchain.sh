@@ -74,7 +74,7 @@ function check_tarballs {
       dosfstools-4.1.tar.xz
       e2fsprogs-1.45.4.tar.gz
       elfutils-0.178.tar.bz2
-      fakeroot_1.24.orig.tar.gz
+      fakeroot_1.23.orig.tar.xz
       flex-2.6.3.tar.gz
       gawk-5.0.1.tar.xz
       gcc-9.2.0.tar.xz
@@ -82,7 +82,7 @@ function check_tarballs {
       glibc-2.30.tar.xz
       gmp-6.1.2.tar.xz
       libtool-2.4.6.tar.xz
-      m4-1.4.18.tar.xz
+      m4-1.4.9.tar.gz
       mpc-1.1.0.tar.gz
       mpfr-4.0.2.tar.xz
       mtools-4.0.23.tar.bz2
@@ -174,16 +174,16 @@ sed -i -e "s,@STAGING_SUBDIR@,$SYSROOT_DIR,g" $TOOLS_DIR/bin/pkg-config
 sed -i -e "s,@STATIC@,," $TOOLS_DIR/bin/pkg-config
 rm -rf $BUILD_DIR/pkgconf-1.6.3
 
-step "[4/25] M4 1.4.18"
-extract $SOURCES_DIR/m4-1.4.18.tar.xz $BUILD_DIR
-( cd $BUILD_DIR/m4-1.4.18 && \
+step "[4/25] M4 1.4.9"
+extract $SOURCES_DIR/m4-1.4.9.tar.gz $BUILD_DIR
+( cd $BUILD_DIR/m4-1.4.9 && \
     ./configure \
     --prefix=$TOOLS_DIR \
     --disable-static \
     --enable-shared )
-make -j$PARALLEL_JOBS -C $BUILD_DIR/m4-1.4.18
-make -j$PARALLEL_JOBS install -C $BUILD_DIR/m4-1.4.18
-rm -rf $BUILD_DIR/m4-1.4.18
+make -j$PARALLEL_JOBS -C $BUILD_DIR/m4-1.4.9
+make -j$PARALLEL_JOBS install -C $BUILD_DIR/m4-1.4.9
+rm -rf $BUILD_DIR/m4-1.4.9
 
 step "[5/25] Libtool 2.4.6"
 extract $SOURCES_DIR/libtool-2.4.6.tar.xz $BUILD_DIR
@@ -292,18 +292,18 @@ make -j$PARALLEL_JOBS -C $BUILD_DIR/e2fsprogs-1.45.4
 make -j$PARALLEL_JOBS install -C $BUILD_DIR/e2fsprogs-1.45.4
 rm -rf $BUILD_DIR/e2fsprogs-1.45.4
 
-step "[11/25] Fakeroot 1.24"
-extract $SOURCES_DIR/fakeroot_1.24.orig.tar.gz $BUILD_DIR
-( cd $BUILD_DIR/fakeroot-1.24 && \
+step "[11/25] Fakeroot 1.23"
+extract $SOURCES_DIR/fakeroot_1.23.orig.tar.xz $BUILD_DIR
+( cd $BUILD_DIR/fakeroot-1.23 && \
     ac_cv_header_sys_capability_h=no \
     ac_cv_func_capset=no \
     ./configure \
     --prefix=$TOOLS_DIR \
     --disable-static \
     --enable-shared )
-make -j$PARALLEL_JOBS -C $BUILD_DIR/fakeroot-1.24
-make -j$PARALLEL_JOBS install -C $BUILD_DIR/fakeroot-1.24
-rm -rf $BUILD_DIR/fakeroot-1.24
+make -j$PARALLEL_JOBS -C $BUILD_DIR/fakeroot-1.23
+make -j$PARALLEL_JOBS install -C $BUILD_DIR/fakeroot-1.23
+rm -rf $BUILD_DIR/fakeroot-1.23
 
 step "[12/25] Bison 3.5"
 extract $SOURCES_DIR/bison-3.5.tar.xz $BUILD_DIR

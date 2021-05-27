@@ -119,7 +119,7 @@ image boot.vfat {
       "boot/Image"
     }
   }
-  size = 18M
+  size = 24M
 }
 image sdcard.img {
   hdimage {
@@ -133,6 +133,7 @@ image sdcard.img {
     partition-type = 0x83
     image = "rootfs.ext4"
   }
+  
 }
 EOF
 $TOOLS_DIR/usr/bin/genimage \
